@@ -1,4 +1,4 @@
-@extends('films.layout')
+@extends('peliculas.layout')
   
 @section('content')
 <div class="row">
@@ -7,7 +7,7 @@
             <h2>Add New Film</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('films.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('peliculas.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('films.store') }}" method="POST">
+<form action="{{ route('peliculas.store') }}" method="POST">
     @csrf
   
      <div class="row">

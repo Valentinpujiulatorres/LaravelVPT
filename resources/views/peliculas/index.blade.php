@@ -1,4 +1,4 @@
-@extends('films.layout')
+@extends('peliculas.layout')
  
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2>Laravel 8 CRUD </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('films.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('peliculas.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
@@ -28,14 +28,14 @@
         @foreach ($films as $film)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $film->name }}</td>
-            <td>{{ $film->saga }}</td>
+            <td>{{ $pelicula->name }}</td>
+            <td>{{ $pelicula->saga }}</td>
             <td>
-                <form action="{{ route('films.destroy',$product->id) }}" method="POST">
+                <form action="{{ route('peliculas.destroy',$pelicula->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('films.show',$product->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('peliculas.show',$pelicula->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('films.edit',$product->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('peliculas.edit',$pelicula->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
@@ -47,6 +47,6 @@
         @endforeach
     </table>
   
-    {!! $films->links() !!}
+    {!! $peliculas->links() !!}
       
 @endsection

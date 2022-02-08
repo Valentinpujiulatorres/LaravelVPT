@@ -1,4 +1,4 @@
-@extends('films.layout')
+@extends('peliculas.layout')
    
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2>Edit Product</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('films.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('peliculas.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
   
-    <form action="{{ route('films.update',$film->id) }}" method="POST">
+    <form action="{{ route('peliculas.update',$pelicula->id) }}" method="POST">
         @csrf
         @method('PUT')
    
@@ -31,13 +31,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $film->name }}" class="form-control" placeholder="Name">
+                    <input type="text" name="name" value="{{ $pelicula->name }}" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>saga</strong>
-                    <textarea class="form-control" style="height:150px" name="saga" placeholder="Detail">{{ $film->saga }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="saga" placeholder="Detail">{{ $pelicula->saga }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

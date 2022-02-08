@@ -1,4 +1,4 @@
-@extends('films.layout')
+@extends('peliculas.layout')
   
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2> Show Film</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('films.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('peliculas.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -16,13 +16,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                {{ $film->name }}
+                {{ $pelicula->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Details:</strong>
-                {{ $film->saga }}
+                {{ $pelicula->saga }}
             </div>
         </div>
     </div>
