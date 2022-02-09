@@ -47,17 +47,17 @@ class PeliculaController extends Controller
             'saga'=>'required',
             'sinopsis'=>'required',
             'lanzamiento'=>'required',
-            'image'=>'required'
+            // 'image'=>'required'
             
         ]);
-        $input = $request->all();
+        /* $input = $request->all();
   
         if ($image = $request->file('image')) {
             $destinationPath = 'image/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
-        }
+        } */
     
         //Pelicula::create($input);
 
