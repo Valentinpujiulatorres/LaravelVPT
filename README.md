@@ -35,3 +35,14 @@
 >php artisan breeze:install
 >npm install
 >npm run dev 
+
+- Importante mirar directorio de rutas (web.php)
+
+- ir a views.layout (asi modificamos el link de dashboard )
+
+
+- Para agregar imagenes 
+
+>migration field is string
+>php make migration:refresh
+>

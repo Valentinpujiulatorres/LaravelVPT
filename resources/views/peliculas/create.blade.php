@@ -13,8 +13,8 @@
 </div>
    
 @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+    <div class="alert alert-warning">
+        <strong>ALERT!</strong> Debes especificar los siguientes campos <br><br>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -44,6 +44,12 @@
                 <strong>Lanzamiento</strong>
                 <input type="date" name="lanzamiento" class="form-controll" value="{{old('lanzamiento')}}">
                 <!-- <input type="text" name="lanzamiento" class="form-control" placeholder="YY-MM-DD" value="{{old('lanzamiento')}}"> -->
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Image</strong>
+                <input type="file" name="image" class="form-control" placeholder="image">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

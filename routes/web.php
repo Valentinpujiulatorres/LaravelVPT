@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 require __DIR__.'/auth.php';
 Route::resource('peliculas', PeliculaController::class)->middleware(['auth']);
 Route::get('/', function () {
-    return view('dashboard');
+    return redirect('register');
 });
 
 Route::get('/dashboard', function () {

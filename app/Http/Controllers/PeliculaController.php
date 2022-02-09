@@ -44,10 +44,26 @@ class PeliculaController extends Controller
         //
         $request->validate([
             'nombre' => 'required',
+            'saga'=>'required',
+            'sinopsis'=>'required',
+            'lanzamiento'=>'required',
+            'image'=>'required'
             
         ]);
+        $input = $request->all();
+  
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
     
-        Pelicula::create($request->all());
+        //Pelicula::create($input);
+
+       Pelicula::create($request->all());
+
+
      
         return redirect()->route('peliculas.index')
                         ->with('success','Film created successfully.');
@@ -89,6 +105,8 @@ class PeliculaController extends Controller
         //
         $request->validate([
             'nombre' => 'required',
+            'saga'=> 'required',
+
             
         ]);
     
