@@ -41,8 +41,22 @@
 - ir a views.layout (asi modificamos el link de dashboard )
 
 
-- Para agregar imagenes 
+- Para las traducciones debemos ir a lang y crear :
+>MisTraducciones.php
+ahi podemos traducir tal que :
 
->migration field is string
->php make migration:refresh
->
+` <?php
+return[
+'role'=> 'rol',
+'Name' => 'Nombre',
+'password'=> 'contraseña',
+
+'attributes' => [
+    'role' => 'rol',
+    'name' => 'nombre',
+    'password' => 'clave',
+]]
+?>`
+
+1. Ademas deberemos especificar la traduccion en el input destino tal que :
+>{{__('Mistraducciones.role')}}:
