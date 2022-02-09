@@ -27,23 +27,35 @@
         @csrf
         @method('PUT')
    
-         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $pelicula->name }}" class="form-control" placeholder="Name">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>saga</strong>
-                    <textarea class="form-control" style="height:150px" name="saga" placeholder="Detail">{{ $pelicula->saga }}</textarea>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Nombre</strong>
+                <input type="text" name="nombre" class="form-control" placeholder="nombre" value="{{$pelicula->nombre}}">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>saga</strong>
+                <input type="text" name="saga" class="form-control" placeholder="saga" value="{{$pelicula->saga}}">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Lanzamiento</strong>
+                <input type="date" name="lanzamiento" class="form-controll" value="{{$pelicula->lanzamiento}}">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Sinopsis</strong>
+                <textarea name="sinopsis" id="sinopsis" class="form-control" placeholder="Sinopsis Here:" value="{{$pelicula->sinopsis}}">{{$pelicula->sinopsis}}</textarea>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
    
     </form>
 @endsection

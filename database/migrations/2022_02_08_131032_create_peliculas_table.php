@@ -18,6 +18,7 @@ class CreatePeliculasTable extends Migration
             $table->string('nombre');
             $table->string('saga');
             $table->date('lanzamiento');
+            $table->text('sinopsis');
             $table->timestamps();
         });
     }

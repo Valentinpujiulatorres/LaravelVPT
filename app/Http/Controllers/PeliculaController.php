@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pelicula;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 class PeliculaController extends Controller
 {
@@ -42,7 +43,7 @@ class PeliculaController extends Controller
     {
         //
         $request->validate([
-            'name' => 'required',
+            'nombre' => 'required',
             
         ]);
     
@@ -87,7 +88,7 @@ class PeliculaController extends Controller
     {
         //
         $request->validate([
-            'name' => 'required',
+            'nombre' => 'required',
             
         ]);
     

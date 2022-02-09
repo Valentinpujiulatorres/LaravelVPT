@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FilmController;
 use App\Http\Controllers\PeliculaController;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,14 @@ use App\Http\Controllers\PeliculaController;
 |
 */
 
+require __DIR__.'/auth.php';
+Route::resource('peliculas', PeliculaController::class)->middleware(['auth']);
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
-Route::resource('films', FilmController::class);
 
-Route::resource('Peliculas', PeliculaController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
