@@ -42,6 +42,7 @@
             <td>{{ $pelicula->saga }}</td>
             <td>{{ $pelicula->lanzamiento}}</td>
             <td>
+
                 <form action="{{ route('peliculas.destroy',$pelicula->id) }}" method="POST">
 
                     <a class="btn btn-info" href="{{ route('peliculas.show',$pelicula->id) }}">Show</a>
@@ -50,8 +51,11 @@
 
                     @csrf
                     @method('DELETE')
-
+                    @can('isAdmin')
                     <button type="submit" class="btn btn-danger">Delete</button>
+                    @else
+                    <button type="submit" class="btn btn-danger" disabled>Delete</button>
+                    @endcan
                 </form>
             </td>
         </tr>

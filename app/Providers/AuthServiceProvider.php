@@ -25,6 +25,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+        Gate::define('isAdmin', function($user) {
+            return $user->email === 'vpujiula@cifpfbmoll.eu';
+        });
         Gate::define('AccesoAUsuarios', function ($user) {
             return $user->email === "vpujiula@cifpfbmoll.eu";
         });

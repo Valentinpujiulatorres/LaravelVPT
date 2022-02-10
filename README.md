@@ -60,3 +60,18 @@ return[
 
 1. Ademas deberemos especificar la traduccion en el input destino tal que :
 >{{__('Mistraducciones.role')}}:
+
+- Para las gates que restrinjan acceso a Servicios :
+>vamos a Providers/AuthserviceProviders
+
+` Gate::define('isAuthor', function($user) {
+             return $user->role == 'author';
+         });`
+
+ 1. luego deberemos ir al input rn concreto a restringir tal que 
+
+ >  @can('isAdmin')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    @else
+                    <button type="submit" class="btn btn-danger" disabled>Delete</button>
+                    @endcan
