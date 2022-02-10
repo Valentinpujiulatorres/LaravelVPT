@@ -6,7 +6,7 @@
 </head>
 <body style="background-image: url('https://img.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg?size=626&ext=jpg') ;">
 <nav  style="margin-top:2%" class="container text-center">
-<a href="/dashboard" class="btn btn-danger shadow">GO BACK</a> 
+<a href="/" class="btn btn-danger shadow">GO BACK</a> 
 </nav>
 
 
