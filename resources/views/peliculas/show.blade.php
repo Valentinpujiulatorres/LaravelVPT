@@ -33,8 +33,21 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Age Rating</strong>
+                
+                {{ $pelicula->calificacion }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Lanzamiento</strong>
                 {{ $pelicula->lanzamiento }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>En Emision ?</strong>
+                {{ $pelicula->emision}}
             </div>
         </div>
 
@@ -45,6 +58,7 @@
                 {{ $pelicula->sinopsis }}
             </div>
         </div>
+        
         
     </div>
 </div>

@@ -46,12 +46,28 @@
                 <!-- <input type="text" name="lanzamiento" class="form-control" placeholder="YY-MM-DD" value="{{old('lanzamiento')}}"> -->
             </div>
         </div>
-        <!-- <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Image</strong>
-                <input type="file" name="image" class="form-control" placeholder="image">
+                <strong>CALIFICACION</strong><br>
+
+                <select class="form-control" aria-label="Default select example" name="calificacion" id="calificacion" value="+18">
+                    <option value="+18">+18</option>
+                    <option value="+16">+16</option>
+                    <option value="11">11</option>
+                    <option value="3">3</option>
+                </select>
             </div>
-        </div> -->
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>En emision?</strong><br>
+                <div>
+                <input  @if(old('emision')=='true')) checked @endif type="checkbox" name="emision" class="form-check" value="1">YES
+                <input @if(old('emision')=='false')) checked @endif type="checkbox" name="emision" class="form-check" value="0">NO
+                    
+                </div>
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Sinopsis</strong>

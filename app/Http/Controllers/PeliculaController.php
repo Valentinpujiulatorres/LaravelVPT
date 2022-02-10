@@ -47,6 +47,8 @@ class PeliculaController extends Controller
             'saga'=>'required',
             'sinopsis'=>'required',
             'lanzamiento'=>'required',
+            'calificacion'=>'required',
+            'emision'=>'required',
             // 'image'=>'required'
             
         ]);

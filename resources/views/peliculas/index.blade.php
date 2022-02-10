@@ -33,14 +33,20 @@
             <th>Name</th>
             <th>saga</th>
             <th>Lanzamiento</th>
+            <th>Rating</th>
+            <th>En Emision</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($peliculas as $pelicula)
+        
+        
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $pelicula->nombre }}</td>
             <td>{{ $pelicula->saga }}</td>
             <td>{{ $pelicula->lanzamiento}}</td>
+            <td>{{$pelicula->calificacion}}</td>
+            <td>{{$pelicula->emision ? 'true' : 'false'}}</td>
             <td>
 
                 <form action="{{ route('peliculas.destroy',$pelicula->id) }}" method="POST">
